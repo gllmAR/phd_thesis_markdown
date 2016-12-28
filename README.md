@@ -45,25 +45,40 @@ There are some minor annoyances:
 1. Install the following software:
     - A text editor, like [Sublime](https://www.sublimetext.com/), which is what you'll use write the thesis.  
     - A LaTex distribution (for example, [MacTex](https://tug.org/mactex/) for Mac users).
-    - [Pandoc](http://johnmacfarlane.net/pandoc), for converting the Markdown to the output format of your choice.  You may also need to install [Pandoc cite-proc](http://pandoc.org/demo/example19/Extension-citations.html) to create the bibliography.
+    - [Pandoc](http://johnmacfarlane.net/pandoc), for converting the Markdown to the output format of your choice.  
+    - You also need to install [Pandoc cite-proc](http://pandoc.org/demo/example19/Extension-citations.html) to create the bibliography.
+    	* ` brew install pandoc`
+    	* ` brew install pandoc-citeproc`
     - Git, for version control.
+    
 2. [Fork the repository](https://github.com/tompollard/phd_thesis_markdown/fork) on Github  
 3. Clone the repository onto your local computer (or [download the Zip file](https://github.com/tompollard/phd_thesis_markdown/archive/master.zip)).  
 4. Navigate to the directory that contains the Makefile and type "make pdf" (or "make html") at the command line to update the PDF (or HTML) in the output directory.  
-**In case of an error** (e.g. `make: *** [pdf] Error 43`) run the following commands:  
-    ```
-    sudo tlmgr install truncate
-    sudo tlmgr install tocloft
-    sudo tlmgr install wallpaper
-    sudo tlmgr install morefloats
-    sudo tlmgr install sectsty
-    sudo tlmgr install siunitx
-    sudo tlmgr install threeparttable
-    sudo tlmgr update l3packages
-    sudo tlmgr update l3kernel
-    sudo tlmgr update l3experimental
-    ```
+**In case of an error** 
+
+(e.g. `make: *** [pdf] Error 43`) run the following commands:  
+
+ ```
+sudo tlmgr install truncate
+sudo tlmgr install tocloft
+sudo tlmgr install wallpaper
+sudo tlmgr install morefloats
+sudo tlmgr install sectsty
+sudo tlmgr install siunitx
+sudo tlmgr install threeparttable
+sudo tlmgr update l3packages
+sudo tlmgr update l3kernel
+sudo tlmgr update l3experimental
+ ```
     
+(e.g. `make: *** [pdf] Error 83`) install  pandoc-citeproc 
+
+run the following commands on OSX:  
+   
+```
+brew install pandoc-citeproc
+ ```   
+   
 5. Edit the files in the 'source' directory, then goto step 4.  
 
 ## What else do I need to know?
